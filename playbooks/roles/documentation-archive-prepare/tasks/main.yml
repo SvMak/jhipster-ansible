@@ -22,7 +22,7 @@
     chdir: "{{ github_folder }}/jhipster.github.io/"
 
 - name: "Build website for archive"
-  shell: SITE_BASE_URL=/documentation-archive/v{{ release_version }}/ IS_DOCS_ARCHIVE=true npm run build
+  shell: SITE_BASE_URL=/documentation-archive/v{{ release_version }}/ IS_DOCS_ARCHIVE=true npm run build -- --locale en
   args:
     chdir: "{{ github_folder }}/jhipster.github.io/"
 
